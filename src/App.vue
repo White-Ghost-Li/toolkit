@@ -13,6 +13,7 @@ export default {
     let logs;
     if (mpvuePlatform === 'my') {
       logs = mpvue.getStorageSync({key: 'logs'}).data || []
+      //
       logs.unshift(Date.now())
       mpvue.setStorageSync({
         key: 'logs',
